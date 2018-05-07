@@ -17,6 +17,18 @@
 			<p>Parent: {{foo}} </p>
 			<CompAsync :foo.sync="foo" />
 		</div>
+
+		<div class="slot-child">
+			<SlotChild>
+				<p slot="head">SlotChildHead</p>
+				<p>SlotChild1</p>
+			</SlotChild>
+
+			<SlotChild>
+				<p>SlotChild2</p>
+			</SlotChild>
+
+		</div>
 	</div>
 </template>
 
@@ -24,6 +36,9 @@
 import Child from './Child.vue';
 import BtnCounter from "./BtnCounter.vue";
 import CompAsync from "./CompAsync.vue";
+import SlotChild from "./SlotChild.vue";
+
+
 export default {
 
 	data(){
@@ -37,7 +52,8 @@ export default {
 	components: {
 		Child: Child,
 		BtnCounter: BtnCounter,
-		CompAsync: CompAsync
+		CompAsync: CompAsync,
+		SlotChild: SlotChild
 	},
 
 	methods: {
