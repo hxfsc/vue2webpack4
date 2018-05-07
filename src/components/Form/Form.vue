@@ -9,9 +9,8 @@
 	</div>
 
 	<hr>
-
 	<div class="checkbox">
-		<h3>选中值为: {{checkboxName}}</h3>
+		<h3>选中值为{{checkboxName}}</h3>
 		<p v-for="item in checkList"> <label for=""><input type="checkbox" name="checkbox" v-model="checkboxName" :value="item">{{item}}</label></p>
 	</div>
 </div>
