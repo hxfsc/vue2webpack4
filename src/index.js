@@ -7,10 +7,13 @@ import Form from "./components/Form/Form.vue";
 import ComBase from "./components/ComBase/ComBase.vue";
 import ComError from "./components/ComError/ComError.vue";
 import ComDefined from "./components/ComDefined/ComDefined.vue";
+
+import ComExtend from "./components/ComExtend/ComExtend.vue"
+
+
+
 const root = document.getElementById("root");
-
-
 new Vue({
-	render: app => app(ComDefined)
+	render: app => app(ComExtend)
 }).$mount(root);
 
