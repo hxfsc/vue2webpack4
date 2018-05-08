@@ -4,7 +4,7 @@ export default {
 	extends: Base,
 	data(){
 		return{
-			test: 19
+			test: 3
 		}
 	},
 

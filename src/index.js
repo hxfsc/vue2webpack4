@@ -14,6 +14,6 @@ import ComExtend from "./components/ComExtend/ComExtend.vue"
 
 const root = document.getElementById("root");
 new Vue({
-	render: app => app(ComExtend)
+	render: app => app(ComDefined)
 }).$mount(root);
 
