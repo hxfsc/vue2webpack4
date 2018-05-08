@@ -15,12 +15,15 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
-				loader: 'babel-loader'
+				use:[
+					"babel-loader",
+				]
 			},
 			{
 				test: /\.vue$/,
 				loader: "vue-loader"
 			},
+
 			{
 				test: /\.scss$/,
 				use: [
