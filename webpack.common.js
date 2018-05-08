@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
-	mode: 'development',
 	entry: path.join(__dirname, "src/index.js"),
 	output: {
 		filename: "bundle.js",
