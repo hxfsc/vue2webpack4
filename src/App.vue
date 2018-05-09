@@ -2,9 +2,14 @@
 	<div>
 		<p>{{text}}</p>
 		<ul>
-			<li v-for="item in items" :key="item.name">
-				<span>{{item.name}}</span>
-				<i>{{item.age}}</i>
+			<li v-for="item in routes" :key="item.name">
+				<router-link :to="{ path: item.path }">{{item.name}}</router-link>
+			</li>
+
+			<hr>
+
+			<li v-for="item in routes" :key="item.path">
+				<router-link :to="item.path">{{item.component}}</router-link>
 			</li>
 		</ul>
 
@@ -16,19 +21,31 @@
 export default {
     data(){
         return {
-			text: "A111pp222",
-			items: [{
-				name: "test1",
-				age: "1"
-			}, {
-				name: "test2",
-				age: "2"
-			}, {
-				name: "test3",
-				age: "3"
+			text: "",
+			routes: [{
+				path: "/com-base",
+				component: "ComBase"
 			},{
-				name: "test4",
-				age: "4"
+				path: "/com-defined",
+				component: "ComDefined"
+			},{
+				path: "/com-error",
+				component: "ComError"
+			},{
+				path: "/com-extend",
+				component: "ComExtend"
+			},{
+				path: "/com-transition",
+				component: "ComTransition"
+			},{
+				path: "/com-vmodel",
+				component: "ComVModel"
+			},{
+				path: "/form",
+				component: "Form"
+			},{
+				path: "/parent-child",
+				component: "ParentChild"
 			}]
         }
     }
