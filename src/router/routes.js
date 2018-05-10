@@ -8,6 +8,7 @@ import ComVModel from "../components/ComVModel/VModel.vue";
 import Form from "../components/Form/Form.vue";
 import ParentChild from "../components/ParentChild/Parent.vue";
 
+import ComRouterProps from "../components/Router/ComRouterProps/ComRouterProps.vue";
 
 export default [
 	{
@@ -37,6 +38,10 @@ export default [
 	},{
 		path: "/parent-child",
 		component: ParentChild
+	},{
+		path: "/router-props/:params_id",
+		component: ComRouterProps,
+		props: true
 	}
 
 

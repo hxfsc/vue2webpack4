@@ -5,7 +5,7 @@
 		<aside>
 			<dl>
 				<dt>Base</dt>
-				<dd v-for="item in routes" :key="item.path">
+				<dd v-for="item in bases" :key="item.path">
 					<router-link :to="item.path">{{item.component}}</router-link>
 				</dd>
 			</dl>
@@ -17,7 +17,7 @@
 
 			<dl>
 				<dt>Vuex</dt>
-				<dd></dd>
+				<dd v-for="item in routers" :key= "item.path"><router-link :to="{ path: item.path, query: { 'query_id': '123' } }">{{ item.component }}</router-link></dd>
 			</dl>
 		</aside>
 
@@ -34,7 +34,7 @@ export default {
     data(){
         return {
 			text: "",
-			routes: [{
+			bases: [{
 				path: "/com-base",
 				component: "ComBase"
 			},{
@@ -58,6 +58,11 @@ export default {
 			},{
 				path: "/parent-child",
 				component: "ParentChild"
+			}],
+
+			routers: [{
+				path: "/router-props/123",
+				component: "RouterProps",
 			}]
         }
     }
