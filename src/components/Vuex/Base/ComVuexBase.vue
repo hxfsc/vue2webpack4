@@ -1,24 +1,29 @@
 <template>
 	<div>
-		<span>{{count}}</span>
-		<span>{{fullName}}</span>
+		<span>{{counter()}}</span>
+		<span>{{fullName()}}</span>
 	</div>
 </template>
 
 <script>
-import { mapState, mapGetters} from "vuex";
+import { mapState, mapGetters, mapActions} from "vuex";
 export default {
 
-	computed: {
-		...mapState(['count']),
-		...mapGetters(['fullName'])
-		// count(){
-		// 	return this.$store.state.count
-		// },
-		// fullName(){
-		// 	return this.$store.getters.fullName
-		// }
+	mounted(){
+		this.updateCountSync({
+			num: 10,
+			time: 2*1000
+		})
+	},
+
+	methods: {
+		...mapState({
+			counter: (state) => state.count
+		}),
+		...mapGetters(["fullName"]),
+		...mapActions(["updateCountSync"])
 	}
+
 }
 </script>
 
