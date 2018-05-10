@@ -1,4 +1,4 @@
-## 一个基于Webpack4 Vue2的配置
+﻿## 一个基于Webpack4 Vue2的配置
 ---
 
 - `npm run start` 开发环境中使用 使用 `webpack.dev.js` 配置
