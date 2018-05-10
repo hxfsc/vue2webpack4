@@ -12,12 +12,12 @@
 
 			<dl>
 				<dt>Router</dt>
-				<dd></dd>
+				<dd v-for="item in routers" :key= "item.path"><router-link :to="{ path: item.path, query: { 'query_id': '123' } }">{{ item.component }}</router-link></dd>
 			</dl>
 
 			<dl>
 				<dt>Vuex</dt>
-				<dd v-for="item in routers" :key= "item.path"><router-link :to="{ path: item.path, query: { 'query_id': '123' } }">{{ item.component }}</router-link></dd>
+				<dd v-for="item in vuexs"><router-link :to="item.path"> {{ item.component }} </router-link></dd>
 			</dl>
 		</aside>
 
@@ -63,6 +63,11 @@ export default {
 			routers: [{
 				path: "/router-props/123",
 				component: "RouterProps",
+			}],
+
+			vuexs: [{
+				path: "/vuex-base",
+				component: "ComVuexBase"
 			}]
         }
     }

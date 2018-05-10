@@ -10,6 +10,8 @@ import ParentChild from "../components/ParentChild/Parent.vue";
 
 import ComRouterProps from "../components/Router/ComRouterProps/ComRouterProps.vue";
 
+import ComVuexBase from "../components/Vuex/Base/ComVuexBase.vue";
+
 export default [
 	{
 		path: "/",
@@ -42,6 +44,9 @@ export default [
 		path: "/router-props/:params_id",
 		component: ComRouterProps,
 		props: true
+	},{
+		path: "/vuex-base",
+		component: ComVuexBase
 	}
 
 
