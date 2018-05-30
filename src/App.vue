@@ -1,7 +1,5 @@
 <template>
 	<div>
-
-
 		<aside>
 			<dl>
 				<dt>Base</dt>
@@ -58,7 +56,10 @@ export default {
 			},{
 				path: "/parent-child",
 				component: "ParentChild"
-			}],
+			},{
+                path: "/signal-base",
+                component: "Signal"
+            }],
 
 			routers: [{
 				path: "/router-props/123",
@@ -83,7 +84,7 @@ export default {
 		position: fixed;
 		width: 200px;
 		min-height: 100%;
-		background: #86878e;
+		background: #4e5169;
 
 		dt,dd{
 			padding-left: $asidePaddingLeft;

@@ -12,6 +12,8 @@ import ComRouterProps from "../components/Router/ComRouterProps/ComRouterProps.v
 
 import ComVuexBase from "../components/Vuex/Base/ComVuexBase.vue";
 
+import Signal from "../components/Signal/SignalBase.vue";
+
 export default [
 	{
 		path: "/",
@@ -47,7 +49,9 @@ export default [
 	},{
 		path: "/vuex-base",
 		component: ComVuexBase
+	},{
+		path: "/signal-base",
+		component: Signal
 	}
-
 
 ]
