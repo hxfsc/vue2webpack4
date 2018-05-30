@@ -1,6 +1,7 @@
 <template>
-	<div>
+	<div class="form-group container container-fluid">
 		<h3>Vmode: <label for="">{{text}}</label></h3>
+        <hr>
 		<v-input :text="text" @input="args => { handleInput(args) }" />
 	</div>
 </template>
@@ -28,6 +29,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang = "scss">
+    .form-group {
+        padding-top: 30px;
+    }
 </style>

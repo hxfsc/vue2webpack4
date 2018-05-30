@@ -1,6 +1,6 @@
 <template>
 <div>
-	<input type="text" v-model="vinputText" @input="handleInput" />
+	<input class="form-control col-sm-2" type="text" v-model="vinputText" @input="handleInput" />
 </div>
 </template>
 

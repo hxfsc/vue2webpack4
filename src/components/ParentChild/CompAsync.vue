@@ -1,7 +1,8 @@
 <template>
-	<div>
+	<div class="form-group">
 		<h3>{{foor}}</h3>
-		<input type="text" v-model="foor" @input="changeFoo" />
+        <hr>
+		<input type="text" v-model="foor" @input="changeFoo" class="form-control col-sm-2" />
 	</div>
 </template>
 

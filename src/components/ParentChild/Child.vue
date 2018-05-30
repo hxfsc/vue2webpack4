@@ -1,7 +1,7 @@
 <template>
 <div>
 	<p>{{message}}</p>
-	<button @click="btnChange">change</button>
+	<button @click="btnChange" class="btn btn-primary">change</button>
 </div>
 </template>
 

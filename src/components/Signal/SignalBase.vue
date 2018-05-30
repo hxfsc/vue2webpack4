@@ -40,7 +40,7 @@ export default {
 
     methods: {
         changeData(data) {
-            this.textData += data;
+            this.textData += parseInt(data);
         }
     }
 }

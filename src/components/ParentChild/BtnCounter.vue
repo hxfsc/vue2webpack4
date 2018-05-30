@@ -1,5 +1,5 @@
 <template>
-	<button @click="addCounter">+</button>
+	<button @click="addCounter" class="btn btn-warning">+</button>
 </template>
 
 <script>

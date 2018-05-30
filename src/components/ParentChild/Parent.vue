@@ -1,7 +1,7 @@
 <template>
-	<div>
-		<div class="base-signal">
-			<input v-model="inputMessage" />
+	<div class="container container-fluid parent-wrap">
+        <div class="base-signal form-group">
+			<input v-model="inputMessage" class="form-control col-sm-4" />
 			<Child message = "parent-child" @click.native="doTheThing" />
 			<Child :message= "inputMessage" @changeInput="changeInput" />
 		</div>
@@ -57,21 +57,23 @@ export default {
 	},
 
 	methods: {
-		doTheThing(e){
+		doTheThing(e) {
 			console.log(e)
 		},
 
-		changeInput(){
+		changeInput() {
 			this.inputMessage = "Child -> inputMessage"
 		},
 
-		addCounter(){
+		addCounter() {
 			this.counter++
 		}
 	}
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    .parent-wrap {
+        padding-top: 40px;
+    }
 </style>

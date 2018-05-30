@@ -59,6 +59,9 @@ export default {
 			},{
                 path: "/signal-base",
                 component: "Signal"
+            },{
+                path: "/sync-base",
+                component: "Sync"
             }],
 
 			routers: [{
