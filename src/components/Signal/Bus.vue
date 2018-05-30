@@ -1,6 +1,5 @@
 <script>
 import Vue from "vue";
-export default {
-    bus: new Vue()
-}
+const bus = new Vue();
+export default bus
 </script>
