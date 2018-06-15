@@ -2,7 +2,7 @@
 	<el-container>
 		<el-header>header</el-header>
 		<el-container>
-			<el-aside width="200px">aside</el-aside>
+
 			<el-container>
 				<el-main>main</el-main>
 				<el-footer>footer</el-footer>
