@@ -1,30 +1,40 @@
 <template>
-	<div>
-		<aside>
-			<dl>
-				<dt>Base</dt>
-				<dd v-for="item in bases" :key="item.path">
-					<router-link :to="item.path">{{item.component}}</router-link>
-				</dd>
-			</dl>
+	<el-container>
+		<el-header></el-header>
+		<el-container>
+			<el-aside>
+				<dl>
+					<dt>Base</dt>
+					<dd v-for="item in bases" :key="item.path">
+						<router-link :to="item.path">{{item.component}}</router-link>
+					</dd>
+				</dl>
 
-			<dl>
-				<dt>Router</dt>
-				<dd v-for="item in routers" :key= "item.path"><router-link :to="{ path: item.path, query: { 'query_id': '123' } }">{{ item.component }}</router-link></dd>
-			</dl>
+				<dl>
+					<dt>Router</dt>
+					<dd v-for="item in routers" :key= "item.path"><router-link :to="{ path: item.path, query: { 'query_id': '123' } }">{{ item.component }}</router-link></dd>
+				</dl>
 
-			<dl>
-				<dt>Vuex</dt>
-				<dd v-for="item in vuexs"><router-link :to="item.path"> {{ item.component }} </router-link></dd>
-			</dl>
-		</aside>
+				<dl>
+					<dt>Vuex</dt>
+					<dd v-for="item in vuexs"><router-link :to="item.path"> {{ item.component }} </router-link></dd>
+				</dl>
 
-		<article>
-			<p>{{text}}</p>
-			<router-view></router-view>
-		</article>
+				<dl>
+						<dt>Element UI</dt>
+						<dd v-for="item in element"><router-link :to="item.path">{{ item.component }}</router-link></dd>
+				</dl>
 
-	</div>
+			</el-aside>
+
+			<el-container>
+				<el-main>
+						<router-view></router-view>
+				</el-main>
+				<el-footer></el-footer>
+			</el-container>
+		</el-container>
+	</el-container>
 </template>
 
 <script>
@@ -62,6 +72,9 @@ export default {
             },{
                 path: "/sync-base",
                 component: "Sync"
+            },{
+                path: "/class-style",
+                component: "ClassStyle"
             }],
 
 			routers: [{
@@ -72,64 +85,19 @@ export default {
 			vuexs: [{
 				path: "/vuex-base",
 				component: "ComVuexBase"
-			}]
+            }],
+
+            element: [{
+              path: "/element-page",
+              component: "ElementPage"
+            },{
+							path: "/element-layout",
+							component: "ElementLayout"
+						}]
         }
     }
 }
 </script>
 
-
-<style lang="scss" scoped>
-
-	$asidePaddingLeft: 20px;
-
-	aside{
-		position: fixed;
-		width: 200px;
-		min-height: 100%;
-		background: #4e5169;
-
-		dt,dd{
-			padding-left: $asidePaddingLeft;
-		}
-		dt{
-			color: #ccc;
-			border-bottom: 1px solid #ccc;
-			height: 40px;
-			line-height: 40px;
-			margin-bottom: 10px;
-		}
-
-		dd{
-			margin-left: 0;
-			line-height: 26px;
-			a{
-				color: #FFF;
-				text-decoration: none;
-			}
-		}
-	}
-
-	article{
-		margin-left: 210px;
-	}
-
-</style>
-
-<style lang="scss">
-	body{
-		padding: 0;
-		margin: 0;
-		font-family: PingFangSC-Regular, Verdana, Arial, 微软雅黑, 宋体;
-		p{
-			margin: 0;
-			padding: 0;
-		}
-
-		h1,h3{
-			margin: 0;
-		}
-	}
-</style>
 
 

@@ -1,7 +1,7 @@
 <template>
 <div>
-	child-defined {{ propsOne }}
-	<label for="">输入修改: <input type="text" v-model="changeText" @input="handleChange()" /></label>
+	child-defined: {{ propsOne }}
+	<label for="">输入修改: <input class="form-control" type="text" v-model="changeText" @input="handleChange()" /></label>
 </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
-<div>
+<div class="container container-fluid">
 	<div class="select">
 		<h3>选中的值为: {{select}}</h3>
-		<select name="" id="" v-model="select">
+		<select name="" id="" v-model="select" class="form-control col-sm-2">
 			<option disabled value="">请选择</option>
 			<option v-for="item in selectdata" :value="item.value">{{item.option}}</option>
 		</select>
@@ -45,6 +45,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+    .select {
+        padding-top: 20px;
+    }
+    .select h3{
+        padding-bottom: 20px;
+    }
 </style>

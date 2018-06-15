@@ -18,6 +18,7 @@ module.exports = {
 		"vue"
     ],
     "rules": {
+        "no-console": 0,
         "indent": [
             "error",
             "tab"

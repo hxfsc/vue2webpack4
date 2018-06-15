@@ -1,6 +1,7 @@
 <template>
-	<div>
-		<button @click="show = !show">Toggle</button>
+	<div class="container container-fluid">
+		<button @click="show = !show" class="btn btn-primary">Toggle</button>
+        <hr>
 		<transition name="fade">
 			<TransitionChild v-if="show" />
 		</transition>
@@ -22,11 +23,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
 }
 .fade-enter, .fade-leave-to {
   opacity: 0
 }
+
+.container{
+    padding-top: 20px;
+}
+
 </style>

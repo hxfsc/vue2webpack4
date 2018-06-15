@@ -14,7 +14,11 @@ import ComVuexBase from "../components/Vuex/Base/ComVuexBase.vue";
 
 import Signal from "../components/Signal/SignalBase.vue";
 import Sync from "../components/Sync/Sync.vue";
+import ClassStyle from "../components/ClassStyle/ClassStyle.vue";
 
+
+import ElementPage from "../components/Element/ElementPage.vue";
+import ElementLayout from "../components/Element/ElementLayout.vue";
 
 export default [
 	{
@@ -57,6 +61,15 @@ export default [
 	},{
 		path: "/sync-base",
 		component: Sync
+	},{
+		path: "/class-style",
+		component: ClassStyle
+	},{
+		path: "/element-page",
+		component: ElementPage
+	},{
+		path: "/element-layout",
+		component: ElementLayout
 	}
 
 ]
