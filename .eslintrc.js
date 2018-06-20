@@ -15,9 +15,11 @@ module.exports = {
 	},
 
     "plugins": [
-		"vue"
+		"vue",
+		"prettier"
     ],
     "rules": {
+			 	"prettier/prettier": "error",
         "no-console": 0,
         "indent": [
             "error",
@@ -32,15 +34,15 @@ module.exports = {
             "double"
         ],
         "semi": [
-			"off",
-            "always"
-		],
-		"quotes": [
-			"off"
-		],
-		"no-unused-vars": [
-			"off",
-			"always"
-		]
+					"off",
+          "always"
+				],
+				"quotes": [
+					"off"
+				],
+				"no-unused-vars": [
+					"off",
+					"always"
+				]
     }
 };

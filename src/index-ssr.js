@@ -1,10 +1,8 @@
 const express = require("express");
 const app = new express();
-
-
 app.get("*", (req, res) => {
-    //res.setHeader("Content-type", "charset=utf-8;text/html;");
-    res.send(`
+	//res.setHeader("Content-type", "charset=utf-8;text/html;");
+	res.send(`
     <!doctype html>
     <html lang="en">
     <head>
