@@ -14,9 +14,8 @@ export default {
 		Extend: Extend,
 		Extend2: Extend2
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

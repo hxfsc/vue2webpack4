@@ -7,19 +7,15 @@
 
 <script>
 export default {
-
-	props: [
-		'message'
-	],
+	props: ["message"],
 
 	methods: {
-		btnChange(){
+		btnChange() {
 			this.$emit("changeInput");
 		}
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

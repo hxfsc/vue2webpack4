@@ -6,14 +6,13 @@
 
 <script>
 export default {
-	data(){
+	data() {
 		return {
 			test: 1
-		}
+		};
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

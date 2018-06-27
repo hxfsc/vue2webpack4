@@ -10,26 +10,26 @@
 <script>
 import ChildDefined from "./ChildDefined.vue";
 export default {
-	data(){
+	data() {
 		return {
 			test: 10
-		}
+		};
 	},
 
-	components:{
+	components: {
 		ChildDefined: ChildDefined
 	},
 
 	methods: {
-		handleChange(e){
-			this.test = e
+		handleChange(e) {
+			this.test = e;
 		}
 	}
-}
+};
 </script>
 
 <style scoped lang="scss">
-    .defined-wrap{
-        padding-top: 20px;
-    }
+.defined-wrap {
+	padding-top: 20px;
+}
 </style>

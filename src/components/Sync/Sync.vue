@@ -10,22 +10,21 @@
 <script>
 import SyncChild from "./SyncChild.vue";
 export default {
-    data() {
-        return {
-            wrapStyle: {
-                paddingTop: '20px'
-            },
+	data() {
+		return {
+			wrapStyle: {
+				paddingTop: "20px"
+			},
 
-            syncParentData: 0
-        }
-    },
+			syncParentData: 0
+		};
+	},
 
-    components: {
-        SyncChild: SyncChild
-    }
-}
+	components: {
+		SyncChild: SyncChild
+	}
+};
 </script>
 
 <style>
-
 </style>

@@ -12,25 +12,23 @@ export default {
 	data() {
 		return {
 			text: "121"
-		}
+		};
 	},
 
 	components: {
-		"VInput": VInput
+		VInput: VInput
 	},
 
 	methods: {
 		handleInput(args) {
-			this.text = args
+			this.text = args;
 		}
 	}
-
-
-}
+};
 </script>
 
 <style scoped lang = "scss">
-    .form-group {
-        padding-top: 30px;
-    }
+.form-group {
+	padding-top: 30px;
+}
 </style>

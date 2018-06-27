@@ -19,29 +19,27 @@
 </template>
 
 <script>
-
 import SignalChild from "./SignalChild.vue";
 import Brother1 from "./Brother1.vue";
 import Brother2 from "./Brother2.vue";
 
 export default {
+	data() {
+		return {
+			textData: 1111
+		};
+	},
 
-    data() {
-       return {
-           textData: 1111
-       }
-    },
+	components: {
+		SignalChild: SignalChild,
+		Brother1: Brother1,
+		Brother2: Brother2
+	},
 
-    components: {
-        SignalChild: SignalChild,
-        Brother1: Brother1,
-        Brother2: Brother2
-    },
-
-    methods: {
-        changeData(data) {
-            this.textData += parseInt(data);
-        }
-    }
-}
+	methods: {
+		changeData(data) {
+			this.textData += parseInt(data);
+		}
+	}
+};
 </script>

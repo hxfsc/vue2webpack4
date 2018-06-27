@@ -6,26 +6,20 @@
 </template>
 
 <script>
-
 export default {
-    data() {
-        return {
+	data() {
+		return {};
+	},
 
-        }
-    },
+	methods: {
+		changeParent() {
+			this.$emit("changeData", 10);
+		}
+	},
 
-    methods: {
-        changeParent() {
-            this.$emit("changeData", 10);
-        }
-    },
-
-    props: [
-        "propsData"
-    ]
-}
+	props: ["propsData"]
+};
 </script>
 
 <style>
-
 </style>

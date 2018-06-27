@@ -13,33 +13,33 @@
 <script>
 import bus from "./Bus.vue";
 export default {
-    data() {
-        return {
-            num: 1,
-            inputData: 0
-        }
-    },
+	data() {
+		return {
+			num: 1,
+			inputData: 0
+		};
+	},
 
-    mounted() {
-        bus.$on("changeBrother", (data) => {
-            this.num = this.num + parseInt(data);
-        })
-    },
+	mounted() {
+		bus.$on("changeBrother", data => {
+			this.num = this.num + parseInt(data);
+		});
+	},
 
-    methods: {
-        changeBrother() {
-            bus.$emit("changeBrother2", this.inputData)
-        }
-    }
-}
+	methods: {
+		changeBrother() {
+			bus.$emit("changeBrother2", this.inputData);
+		}
+	}
+};
 </script>
 
 <style lang="scss" scoped>
-    .container{
-        margin-bottom: 20px;
+.container {
+	margin-bottom: 20px;
 
-        label{
-            margin-right: 40px;
-        }
-    }
+	label {
+		margin-right: 40px;
+	}
+}
 </style>

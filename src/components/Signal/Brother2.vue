@@ -14,30 +14,29 @@
 <script>
 import bus from "./Bus.vue";
 export default {
-    data() {
-        return {
-            num: 1,
-            inputData: 0,
-        }
-    },
+	data() {
+		return {
+			num: 1,
+			inputData: 0
+		};
+	},
 
-    methods: {
-        changeBrother2() {
-            bus.$emit("changeBrother", this.inputData);
-        }
-    },
+	methods: {
+		changeBrother2() {
+			bus.$emit("changeBrother", this.inputData);
+		}
+	},
 
-    mounted() {
-        bus.$on("changeBrother2", (data) => {
-            this.num = this.num + parseInt(data);
-        });
-    }
-
-}
+	mounted() {
+		bus.$on("changeBrother2", data => {
+			this.num = this.num + parseInt(data);
+		});
+	}
+};
 </script>
 
 <style lang="scss" scoped>
-    label{
-        margin-right: 40px;
-    }
+label {
+	margin-right: 40px;
+}
 </style>

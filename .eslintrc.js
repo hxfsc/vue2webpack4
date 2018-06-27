@@ -19,7 +19,7 @@ module.exports = {
 		"prettier"
     ],
     "rules": {
-			 	"prettier/prettier": "error",
+		"prettier/prettier": "error",
         "no-console": 0,
         "indent": [
             "error",

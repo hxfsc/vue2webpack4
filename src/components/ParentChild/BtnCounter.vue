@@ -5,13 +5,12 @@
 <script>
 export default {
 	methods: {
-		addCounter(){
-			this.$emit("addCounter")
+		addCounter() {
+			this.$emit("addCounter");
 		}
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

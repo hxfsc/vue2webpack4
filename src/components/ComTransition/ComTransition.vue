@@ -11,28 +11,29 @@
 <script>
 import TransitionChild from "./TransitionChild.vue";
 export default {
-	data(){
+	data() {
 		return {
 			show: true
-		}
+		};
 	},
 
 	components: {
 		TransitionChild: TransitionChild
 	}
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to {
-  opacity: 0
-}
-
-.container{
-    padding-top: 20px;
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
 }
 
+.container {
+	padding-top: 20px;
+}
 </style>

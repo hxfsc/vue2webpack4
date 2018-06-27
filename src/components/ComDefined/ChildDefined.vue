@@ -7,26 +7,25 @@
 
 <script>
 export default {
-	data(){
+	data() {
 		return {
 			changeText: this.$props.propsOne
-		}
+		};
 	},
 
-	props:{
-		"propsOne":{
-			default : 1
+	props: {
+		propsOne: {
+			default: 1
 		}
 	},
 
 	methods: {
-		handleChange(){
-			this.$emit("changeText", this.changeText)
+		handleChange() {
+			this.$emit("changeText", this.changeText);
 		}
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

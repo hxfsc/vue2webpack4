@@ -6,16 +6,14 @@
 
 <script>
 export default {
-
-	render(h){
-		throw new TypeError('oops');
+	render(h) {
+		throw new TypeError("oops");
 	},
-	renderError(h, err){
-		return h("div", {style:{color: "red"}}, err.stack);
+	renderError(h, err) {
+		return h("div", { style: { color: "red" } }, err.stack);
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

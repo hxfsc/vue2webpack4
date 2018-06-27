@@ -33,20 +33,18 @@
 </template>
 
 <script>
-import Child from './Child.vue';
+import Child from "./Child.vue";
 import BtnCounter from "./BtnCounter.vue";
 import CompAsync from "./CompAsync.vue";
 import SlotChild from "./SlotChild.vue";
 
-
 export default {
-
-	data(){
+	data() {
 		return {
 			inputMessage: "inputMessage",
 			counter: 0,
-			foo: "bar",
-		}
+			foo: "bar"
+		};
 	},
 
 	components: {
@@ -58,22 +56,22 @@ export default {
 
 	methods: {
 		doTheThing(e) {
-			console.log(e)
+			console.log(e);
 		},
 
 		changeInput() {
-			this.inputMessage = "Child -> inputMessage"
+			this.inputMessage = "Child -> inputMessage";
 		},
 
 		addCounter() {
-			this.counter++
+			this.counter++;
 		}
 	}
-}
+};
 </script>
 
 <style scoped lang="scss">
-    .parent-wrap {
-        padding-top: 40px;
-    }
+.parent-wrap {
+	padding-top: 40px;
+}
 </style>

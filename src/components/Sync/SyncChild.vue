@@ -6,19 +6,15 @@
 
 <script>
 export default {
+	props: ["syncData"],
 
-    props: [
-        "syncData"
-    ],
-
-    methods: {
-        changeSyncData(data) {
-            this.$emit("update:syncData", data)
-        }
-    }
-}
+	methods: {
+		changeSyncData(data) {
+			this.$emit("update:syncData", data);
+		}
+	}
+};
 </script>
 
 <style>
-
 </style>

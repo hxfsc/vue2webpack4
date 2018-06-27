@@ -13,27 +13,27 @@
 </template>
 <script>
 export default {
-    methods: {
-      handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
-      },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      }
-    },
-    data() {
-      return {
-        currentPage4: 4
-      };
-    }
-}
+	methods: {
+		handleSizeChange(val) {
+			console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange(val) {
+			console.log(`当前页: ${val}`);
+		}
+	},
+	data() {
+		return {
+			currentPage4: 4
+		};
+	}
+};
 </script>
 
 <style lang="scss" scoped>
-	.el-icon-arrow-up:before{
-		position: relative;
-		top: -6px;
-	}
+.el-icon-arrow-up:before {
+	position: relative;
+	top: -6px;
+}
 </style>
 
 

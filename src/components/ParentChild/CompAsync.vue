@@ -8,23 +8,20 @@
 
 <script>
 export default {
-	data(){
+	data() {
 		return {
 			foor: this.$props.foo
-		}
+		};
 	},
-	props: [
-		"foo"
-	],
+	props: ["foo"],
 
-	methods:{
-		changeFoo(){
-			this.$emit("update:foo", this.foor)
+	methods: {
+		changeFoo() {
+			this.$emit("update:foo", this.foor);
 		}
 	}
-}
+};
 </script>
 
 <style>
-
 </style>

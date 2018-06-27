@@ -16,7 +16,6 @@ import Signal from "../components/Signal/SignalBase.vue";
 import Sync from "../components/Sync/Sync.vue";
 import ClassStyle from "../components/ClassStyle/ClassStyle.vue";
 
-
 import ElementPage from "../components/Element/ElementPage.vue";
 import ElementLayout from "../components/Element/ElementLayout.vue";
 
@@ -24,52 +23,66 @@ export default [
 	{
 		path: "/",
 		redirect: "/com-base"
-	},{
+	},
+	{
 		path: "/com-base",
 		component: ComBase
-	},{
+	},
+	{
 		path: "/com-defined",
 		component: ComDefined
-	},{
+	},
+	{
 		path: "/com-error",
 		component: ComError
-	},{
+	},
+	{
 		path: "/com-extend",
 		component: ComExtend
-	},{
+	},
+	{
 		path: "/com-transition",
 		component: ComTransition
-	},{
+	},
+	{
 		path: "/com-vmodel",
 		component: ComVModel
-	},{
+	},
+	{
 		path: "/form",
 		component: Form
-	},{
+	},
+	{
 		path: "/parent-child",
 		component: ParentChild
-	},{
+	},
+	{
 		path: "/router-props/:params_id",
 		component: ComRouterProps,
 		props: true
-	},{
+	},
+	{
 		path: "/vuex-base",
 		component: ComVuexBase
-	},{
+	},
+	{
 		path: "/signal-base",
 		component: Signal
-	},{
+	},
+	{
 		path: "/sync-base",
 		component: Sync
-	},{
+	},
+	{
 		path: "/class-style",
 		component: ClassStyle
-	},{
+	},
+	{
 		path: "/element-page",
 		component: ElementPage
-	},{
+	},
+	{
 		path: "/element-layout",
 		component: ElementLayout
 	}
-
-]
+];

@@ -15,35 +15,35 @@
 
 <script>
 export default {
-    data() {
-        return {
-            isActive: true,
-            hasError: false,
-            styleObject: {
-                "backgroundColor": "#ff0000",
-                "color": "#FFF"
-            }
-        }
-    },
+	data() {
+		return {
+			isActive: true,
+			hasError: false,
+			styleObject: {
+				backgroundColor: "#ff0000",
+				color: "#FFF"
+			}
+		};
+	},
 
-    methods: {
-        toggle() {
-            this.isActive = this.isActive ? false : true;
-            this.hasError = this.hasError ? false : true;
-        },
+	methods: {
+		toggle() {
+			this.isActive = this.isActive ? false : true;
+			this.hasError = this.hasError ? false : true;
+		},
 
-        toggleStyle(){
-            this.styleObject = {
-                "backgroundColor": "#ff00ff",
-                "color": "#FFF"
-            }
-        }
-    }
-}
+		toggleStyle() {
+			this.styleObject = {
+				backgroundColor: "#ff00ff",
+				color: "#FFF"
+			};
+		}
+	}
+};
 </script>
 
 <style scoped lang="scss">
-    .class-style-wrap {
-        padding-top:  20px;
-    }
+.class-style-wrap {
+	padding-top: 20px;
+}
 </style>

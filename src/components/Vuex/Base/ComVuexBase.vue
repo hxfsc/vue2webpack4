@@ -6,27 +6,24 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions} from "vuex";
+import { mapState, mapGetters, mapActions } from "vuex";
 export default {
-
-	mounted(){
+	mounted() {
 		this.updateCountSync({
 			num: 10,
-			time: 2*1000
-		})
+			time: 2 * 1000
+		});
 	},
 
 	methods: {
 		...mapState({
-			counter: (state) => state.count
+			counter: state => state.count
 		}),
 		...mapGetters(["fullName"]),
 		...mapActions(["updateCountSync"])
 	}
-
-}
+};
 </script>
 
 <style>
-
 </style>

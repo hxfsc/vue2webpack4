@@ -7,19 +7,13 @@
 
 <script>
 export default {
-	data(){
-		return {}
+	data() {
+		return {};
 	},
 
-	props: [
-		'params_id',
-		'query_id'
-	]
-
-
-}
+	props: ["params_id", "query_id"]
+};
 </script>
 
 <style>
-
 </style>
