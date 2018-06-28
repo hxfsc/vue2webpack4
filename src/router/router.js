@@ -4,10 +4,8 @@ import routes from "./routes";
 
 export default () => {
 	return new VueRouter({
-		routes,
 		mode: "history",
-		//base: "/base",
-
+		routes,
 		scrollBehavior(to, from, savedPosition) {
 			if (savedPosition) {
 				return savedPosition;
