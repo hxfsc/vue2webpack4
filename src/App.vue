@@ -57,6 +57,11 @@
 
 			<el-container>
 				<el-main>
+					<el-breadcrumb separator="/">
+						<el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+						<el-breadcrumb-item>{{breadcrumb.title}}</el-breadcrumb-item>
+					</el-breadcrumb>
+					<hr />
 					<router-view></router-view>
 				</el-main>
 				<el-footer></el-footer>
@@ -99,7 +104,7 @@ header {
 </style>
 
 <script>
-import bases, {vueRouters, vuexs, element } from "./router/routes";
+import bases, { vueRouters, vuexs, element } from "./router/routes";
 export default {
 	data() {
 		return {
@@ -109,6 +114,15 @@ export default {
 			vuexs,
 			element
 		};
+	},
+
+	computed: {
+		breadcrumb() {
+			const { path } = this.$route;
+			const { routes } = this.$router.options;
+            const breadcrumb = routes.find(item=>item.path===path);
+            return breadcrumb
+		}
 	}
 };
 </script>
