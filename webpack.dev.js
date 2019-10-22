@@ -10,6 +10,6 @@ module.exports = merge(common, {
 		historyApiFallback: {
 			index: "./index.html"
 		},
-		contentBase: "./dist"
+        contentBase: "./dist"
 	}
 })

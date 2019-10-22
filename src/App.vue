@@ -1,3 +1,70 @@
+<template>
+	<el-container>
+		<el-header></el-header>
+		<el-container>
+			<el-aside width="200px">
+				<el-menu>
+					<el-submenu index="1">
+						<template slot="title">
+							<i class="el-icon-location"></i>
+							<span>基础</span>
+						</template>
+						<el-menu-item-group>
+							<el-menu-item v-for="(item, key) in bases" :index="'1-'+key" :key="key">
+								<router-link :to="item.path">{{item.component}}</router-link>
+							</el-menu-item>
+						</el-menu-item-group>
+					</el-submenu>
+
+					<el-submenu index="2">
+						<template slot="title">
+							<i class="el-icon-location"></i>
+							<span>路由</span>
+						</template>
+
+						<el-menu-item-group>
+							<el-menu-item v-for="(item, key) in routers" :index="'2-'+key" :key="key">
+								<router-link :to="item.path">{{item.component}}</router-link>
+							</el-menu-item>
+						</el-menu-item-group>
+					</el-submenu>
+
+					<el-submenu index="3">
+						<template slot="title">
+							<i class="el-icon-location"></i>
+							<span>Vuex</span>
+						</template>
+						<el-menu-item-group>
+							<el-menu-item v-for="(item, key) in vuexs" :index="'3-'+key" :key="key">
+								<router-link :to="item.path">{{item.component}}</router-link>
+							</el-menu-item>
+						</el-menu-item-group>
+					</el-submenu>
+
+					<el-submenu index="4">
+						<template slot="title">
+							<i class="el-icon-location"></i>
+							<span>Element UI</span>
+						</template>
+						<el-menu-item-group>
+							<el-menu-item v-for="(item, key) in element" :index="'4-'+key" :key="key">
+								<router-link :to="item.path">{{item.component}}</router-link>
+							</el-menu-item>
+						</el-menu-item-group>
+					</el-submenu>
+				</el-menu>
+			</el-aside>
+
+			<el-container>
+				<el-main>
+					<router-view></router-view>
+				</el-main>
+				<el-footer></el-footer>
+			</el-container>
+		</el-container>
+	</el-container>
+</template>
+
 <style scoped lang="scss">
 aside {
 	border-right: solid 1px #e6e6e6;
@@ -17,68 +84,6 @@ header {
 	}
 }
 </style>
-
-<template>
-	<el-container>
-		<el-header></el-header>
-		<el-container>
-			<el-aside width="200px">
-				<el-menu>
-					<el-submenu index="1">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-                            <span>基础</span>
-						</template>
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in bases" :index ="'1-'+key" :key="key"><router-link :to="item.path"> {{item.component}} </router-link></el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-
-					<el-submenu index="2">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>路由</span>
-						</template>
-
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in routers" :index="'2-'+key" :key="key"><router-link :to="item.path"> {{item.component}} </router-link></el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-
-					<el-submenu index="3">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>Vuex</span>
-						</template>
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in vuexs" :index="'3-'+key" :key="key"><router-link :to="item.path">{{item.component}}</router-link></el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-
-					<el-submenu index="4">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>Element UI</span>
-						</template>
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in element" :index="'4-'+key" :key="key"><router-link :to="item.path">{{item.component}}</router-link></el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-				</el-menu>
-
-
-
-			</el-aside>
-
-			<el-container>
-				<el-main>
-						<router-view></router-view>
-				</el-main>
-				<el-footer></el-footer>
-			</el-container>
-		</el-container>
-	</el-container>
-</template>
 
 <script>
 export default {
