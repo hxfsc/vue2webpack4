@@ -3,52 +3,15 @@
 		<el-header></el-header>
 		<el-container>
 			<el-aside width="200px">
-				<el-menu unique-opened="true">
-					<el-submenu index="1">
+				<el-menu>
+					<el-submenu v-for="(route, index) in routes" :index="`${route.title}-${index}`" :key="index">
 						<template slot="title">
 							<i class="el-icon-location"></i>
-							<span>基础</span>
+							<span>{{route.title}}</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in bases" :index="'1-'+key" :key="key">
+							<el-menu-item v-for="(item, key) in route.childs" :index="`${item.title}-${key}`" :key="key">
 								<router-link :to="item.path">{{item.name}}</router-link>
-							</el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-
-					<el-submenu index="2">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>路由</span>
-						</template>
-
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in routers" :index="'2-'+key" :key="key">
-								<router-link :to="item.path">{{item.component}}</router-link>
-							</el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-
-					<el-submenu index="3">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>Vuex</span>
-						</template>
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in vuexs" :index="'3-'+key" :key="key">
-								<router-link :to="item.path">{{item.component}}</router-link>
-							</el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-
-					<el-submenu index="4">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>Element UI</span>
-						</template>
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in element" :index="'4-'+key" :key="key">
-								<router-link :to="item.path">{{item.component}}</router-link>
 							</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
@@ -59,7 +22,7 @@
 				<el-main>
 					<el-breadcrumb separator="/">
 						<el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-						<el-breadcrumb-item>{{breadcrumb.title}}</el-breadcrumb-item>
+						<el-breadcrumb-item v-for="(item, index) in breadcrumb" :key="index" :to="{ path: item.path}">{{item.title}}</el-breadcrumb-item>
 					</el-breadcrumb>
 					<hr />
 					<router-view></router-view>
@@ -104,24 +67,21 @@ header {
 </style>
 
 <script>
-import bases, { vueRouters, vuexs, element } from "./router/routes";
+import routes from "./router/routes";
 export default {
 	data() {
 		return {
 			text: "",
-			bases: bases.filter(item => item.path !== "/"),
-			routers: vueRouters,
-			vuexs,
-			element
+			routes
 		};
 	},
 
 	computed: {
 		breadcrumb() {
 			const { path } = this.$route;
-			const { routes } = this.$router.options;
-            const breadcrumb = routes.find(item=>item.path===path);
-            return breadcrumb
+			const { routes:r } = this.$router.options;
+            const breadcrumb = r.filter(item => item.path == path);
+			return breadcrumb;
 		}
 	}
 };
