@@ -6,13 +6,14 @@ const ComTransition = () => import("@components/Transition");
 const ComVModel = () => import("@components/VModel");
 const Form = () => import("@components/Form");
 const ParentChild = () => import("@components/ParentChild");
-const ComVuexBase = () => import("@components/Vuex/Base");
 const Signal = () => import("@components/Signal");
 const Sync = () => import("@components/Sync");
 const ClassStyle = () => import("@components/ClassStyle");
 const ElementPage = () => import("@components/Element/ElementPage.vue");
 const ElementLayout = () => import("@components/Element/ElementLayout.vue");
 const ComRouterProps = () => import("@components/Router/ComRouterProps");
+const ComVuexBase = () => import("@components/Vuex/Base");
+const VuexInput = () => import("@components/Vuex/Input");
 
 const routers = [
 	{
@@ -105,15 +106,20 @@ const routers = [
 
 	{
 		title: "Vuex",
-		name: "ComVuexBase",
+		name: "VuexBase",
 		path: "/vuex-base",
-		redirect: "/vuex-base",
 		children: [
 			{
-				title: "ComVuexBase",
-				name: "ComVuexBase",
+				title: "VuexBase",
+				name: "VuexBase",
 				path: "/vuex-base",
 				component: ComVuexBase
+			},
+			{
+				title: "VuexInput",
+				name: "VuexInput",
+				path: "/vuex-input",
+				component: VuexInput
 			}
 		]
 	},
