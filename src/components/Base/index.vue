@@ -1,8 +1,8 @@
 <template>
-<div>
-	<p>{{text}}</p>
-	<p>{{ptext}}</p>
-</div>
+	<div>
+		<p>{{text}}</p>
+		<p>{{ptext}}</p>
+	</div>
 </template>
 
 <script>

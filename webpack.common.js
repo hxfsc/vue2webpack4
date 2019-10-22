@@ -5,10 +5,16 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 module.exports = {
 	entry: ["@babel/polyfill", path.join(__dirname, "src/index.js")],
 	output: {
-        filename: "[name].[hash].bundle.js",
-        chunkFilename: "[name].[hash].bundle.js",
+		filename: "[name].[hash].bundle.js",
+		chunkFilename: "[name].[hash].bundle.js",
 		path: path.join(__dirname, "dist"),
 		publicPath: "/"
+	},
+	resolve: {
+		extensions: ["*", ".js", ".vue"],
+		alias: {
+			"@components": path.resolve(__dirname, "src/components")
+		}
 	},
 	module: {
 		rules: [

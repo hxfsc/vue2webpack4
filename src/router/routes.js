@@ -1,18 +1,18 @@
-const ComBase = () => import("../components/ComBase/ComBase.vue");
-const ComDefined = () => import("../components/ComDefined/ComDefined.vue");
-const ComError = () => import("../components/ComError/ComError.vue");
-const ComExtend = () => import("../components/ComExtend/ComExtend.vue");
-const ComTransition = () => import("../components/ComTransition/ComTransition.vue");
-const ComVModel = () => import("../components/ComVModel/VModel.vue");
-const Form = () => import("../components/Form/Form.vue");
-const ParentChild = () => import("../components/ParentChild/Parent.vue");
-const ComVuexBase = () => import("../components/Vuex/Base/ComVuexBase.vue");
-const Signal = () => import("../components/Signal/SignalBase.vue");
-const Sync = () => import("../components/Sync/Sync.vue");
-const ClassStyle = () => import("../components/ClassStyle/ClassStyle.vue");
-const ElementPage = () => import("../components/Element/ElementPage.vue");
-const ElementLayout = () => import("../components/Element/ElementLayout.vue");
-const ComRouterProps = () => import("../components/Router/ComRouterProps/ComRouterProps.vue");
+const ComBase = () => import("@components/Base");
+const ComDefined = () => import("@components/Defined");
+const ComError = () => import("@components/Error");
+const ComExtend = () => import("@components/Extend");
+const ComTransition = () => import("@components/Transition");
+const ComVModel = () => import("@components/VModel");
+const Form = () => import("@components/Form");
+const ParentChild = () => import("@components/ParentChild");
+const ComVuexBase = () => import("@components/Vuex/Base");
+const Signal = () => import("@components/Signal");
+const Sync = () => import("@components/Sync");
+const ClassStyle = () => import("@components/ClassStyle");
+const ElementPage = () => import("@components/Element/ElementPage.vue");
+const ElementLayout = () => import("@components/Element/ElementLayout.vue");
+const ComRouterProps = () => import("@components/Router/ComRouterProps");
 
 const routers = [
 	{
