@@ -92,7 +92,6 @@ const routers = [
 
 	{
 		title: "Router",
-		name: "RouterProps",
 		children: [
 			{
 				title: "RouterProps",

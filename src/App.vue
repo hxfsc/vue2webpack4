@@ -3,7 +3,7 @@
 		<el-header></el-header>
 		<el-container>
 			<el-aside width="200px">
-				<el-menu>
+				<el-menu :unique-opened="true">
 					<el-submenu v-for="(route, index) in routes" :index="`${route.title}-${index}`" :key="index">
 						<template slot="title">
 							<i class="el-icon-location"></i>
@@ -35,6 +35,7 @@
 </template>
 
 <style lang="scss">
+@import "bootstrap/scss/bootstrap.scss";
 html,
 body {
 	height: 100%;
@@ -63,6 +64,7 @@ header {
 		display: inline-block;
 		height: 100%;
 		width: 100%;
+        text-decoration: none;
 	}
 }
 </style>
