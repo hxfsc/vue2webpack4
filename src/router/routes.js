@@ -1,21 +1,18 @@
-import ComBase from "../components/ComBase/ComBase.vue";
-import ComDefined from "../components/ComDefined/ComDefined.vue";
-import ComError from "../components/ComError/ComError.vue";
-import ComExtend from "../components/ComExtend/ComExtend.vue";
-import ComTransition from "../components/ComTransition/ComTransition.vue";
-import ComVModel from "../components/ComVModel/VModel.vue";
-import Form from "../components/Form/Form.vue";
-import ParentChild from "../components/ParentChild/Parent.vue";
-
-import ComVuexBase from "../components/Vuex/Base/ComVuexBase.vue";
-import Signal from "../components/Signal/SignalBase.vue";
-import Sync from "../components/Sync/Sync.vue";
-import ClassStyle from "../components/ClassStyle/ClassStyle.vue";
-import ElementPage from "../components/Element/ElementPage.vue";
-import ElementLayout from "../components/Element/ElementLayout.vue";
-
-const ComRouterProps = () =>
-	import("../components/Router/ComRouterProps/ComRouterProps.vue");
+const ComBase = () => import("../components/ComBase/ComBase.vue");
+const ComDefined = () => import("../components/ComDefined/ComDefined.vue");
+const ComError = () => import("../components/ComError/ComError.vue");
+const ComExtend = () => import("../components/ComExtend/ComExtend.vue");
+const ComTransition = () => import("../components/ComTransition/ComTransition.vue");
+const ComVModel = () => import("../components/ComVModel/VModel.vue");
+const Form = () => import("../components/Form/Form.vue");
+const ParentChild = () => import("../components/ParentChild/Parent.vue");
+const ComVuexBase = () => import("../components/Vuex/Base/ComVuexBase.vue");
+const Signal = () => import("../components/Signal/SignalBase.vue");
+const Sync = () => import("../components/Sync/Sync.vue");
+const ClassStyle = () => import("../components/ClassStyle/ClassStyle.vue");
+const ElementPage = () => import("../components/Element/ElementPage.vue");
+const ElementLayout = () => import("../components/Element/ElementLayout.vue");
+const ComRouterProps = () => import("../components/Router/ComRouterProps/ComRouterProps.vue");
 
 const routers = [
 	{
