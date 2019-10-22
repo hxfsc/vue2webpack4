@@ -1,5 +1,5 @@
 <template>
-	<el-container>
+	<el-container id="main">
 		<el-header></el-header>
 		<el-container>
 			<el-aside width="200px">
@@ -11,7 +11,7 @@
 						</template>
 						<el-menu-item-group>
 							<el-menu-item v-for="(item, key) in bases" :index="'1-'+key" :key="key">
-								<router-link :to="item.path">{{item.component}}</router-link>
+								<router-link :to="item.path">{{item.name}}</router-link>
 							</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
@@ -65,10 +65,23 @@
 	</el-container>
 </template>
 
+<style lang="scss">
+html,
+body {
+	height: 100%;
+	min-height: 100%;
+}
+</style>
+
 <style scoped lang="scss">
+#main {
+	height: 100%;
+	min-height: 100%;
+}
 aside {
 	border-right: solid 1px #e6e6e6;
 	min-height: 100%;
+	overflow: hidden;
 }
 header {
 	background-color: #545c64;
@@ -86,57 +99,12 @@ header {
 </style>
 
 <script>
+import bases from "./router/routes";
 export default {
 	data() {
 		return {
 			text: "",
-			bases: [
-				{
-					path: "/com-base",
-					component: "ComBase"
-				},
-				{
-					path: "/com-defined",
-					component: "ComDefined"
-				},
-				{
-					path: "/com-error",
-					component: "ComError"
-				},
-				{
-					path: "/com-extend",
-					component: "ComExtend"
-				},
-				{
-					path: "/com-transition",
-					component: "ComTransition"
-				},
-				{
-					path: "/com-vmodel",
-					component: "ComVModel"
-				},
-				{
-					path: "/form",
-					component: "Form"
-				},
-				{
-					path: "/parent-child",
-					component: "ParentChild"
-				},
-				{
-					path: "/signal-base",
-					component: "Signal"
-				},
-				{
-					path: "/sync-base",
-					component: "Sync"
-				},
-				{
-					path: "/class-style",
-					component: "ClassStyle"
-				}
-			],
-
+			bases: bases.filter(item => item.path !== "/"),
 			routers: [
 				{
 					path: "/router-props/123",

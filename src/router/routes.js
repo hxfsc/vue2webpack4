@@ -21,67 +21,83 @@ import ElementLayout from "../components/Element/ElementLayout.vue";
 
 export default [
 	{
+		name: "com-base",
 		path: "/",
 		redirect: "/com-base"
 	},
 	{
+		name: "com-base",
 		path: "/com-base",
 		component: ComBase
 	},
 	{
+		name: "com-defined",
 		path: "/com-defined",
 		component: ComDefined
 	},
 	{
+		name: "ComError",
 		path: "/com-error",
 		component: ComError
 	},
 	{
+		name: "ComExtend",
 		path: "/com-extend",
 		component: ComExtend
 	},
 	{
+		name: "ComTransition",
 		path: "/com-transition",
 		component: ComTransition
 	},
 	{
+		name: "ComVModel",
 		path: "/com-vmodel",
 		component: ComVModel
 	},
 	{
+		name: "Form",
 		path: "/form",
 		component: Form
 	},
 	{
+		name: "ParentChild",
 		path: "/parent-child",
 		component: ParentChild
 	},
 	{
+		name: "ComRouterProps",
 		path: "/router-props/:params_id",
 		component: ComRouterProps,
 		props: true
 	},
 	{
+		name: "ComVuexBase",
 		path: "/vuex-base",
 		component: ComVuexBase
 	},
 	{
+		name: "Signal",
 		path: "/signal-base",
 		component: Signal
 	},
 	{
+		name: "Sync",
 		path: "/sync-base",
 		component: Sync
 	},
 	{
+		name: "ClassStyle",
 		path: "/class-style",
 		component: ClassStyle
 	},
 	{
+		name: "ElementPage",
 		path: "/element-page",
 		component: ElementPage
 	},
 	{
+		name: "ElementLayout",
 		path: "/element-layout",
 		component: ElementLayout
 	}
