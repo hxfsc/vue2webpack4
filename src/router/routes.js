@@ -19,7 +19,7 @@ import ClassStyle from "../components/ClassStyle/ClassStyle.vue";
 import ElementPage from "../components/Element/ElementPage.vue";
 import ElementLayout from "../components/Element/ElementLayout.vue";
 
-export default [
+const bases = [
 	{
 		name: "com-base",
 		path: "/",
@@ -102,3 +102,36 @@ export default [
 		component: ElementLayout
 	}
 ];
+
+const vueRouters = [
+	{
+		name: "RouterProps",
+		path: "/router-props/123",
+		component: "RouterProps"
+	}
+];
+
+const vuexs = [
+	{
+		name: "ComVuexBase",
+		path: "/vuex-base",
+		component: "ComVuexBase"
+	}
+];
+
+const element = [
+	{
+		name: "ElementPage",
+		path: "/element-page",
+		component: "ElementPage"
+	},
+	{
+		name: "ElementLayout",
+		path: "/element-layout",
+		component: "ElementLayout"
+	}
+];
+
+export { vueRouters, vuexs, element };
+
+export default bases;

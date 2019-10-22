@@ -99,36 +99,15 @@ header {
 </style>
 
 <script>
-import bases from "./router/routes";
+import bases, {vueRouters, vuexs, element } from "./router/routes";
 export default {
 	data() {
 		return {
 			text: "",
 			bases: bases.filter(item => item.path !== "/"),
-			routers: [
-				{
-					path: "/router-props/123",
-					component: "RouterProps"
-				}
-			],
-
-			vuexs: [
-				{
-					path: "/vuex-base",
-					component: "ComVuexBase"
-				}
-			],
-
-			element: [
-				{
-					path: "/element-page",
-					component: "ElementPage"
-				},
-				{
-					path: "/element-layout",
-					component: "ElementLayout"
-				}
-			]
+			routers: vueRouters,
+			vuexs,
+			element
 		};
 	}
 };
