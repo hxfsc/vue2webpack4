@@ -3,7 +3,7 @@
 		<el-header></el-header>
 		<el-container>
 			<el-aside width="200px">
-				<el-menu>
+				<el-menu unique-opened="true">
 					<el-submenu index="1">
 						<template slot="title">
 							<i class="el-icon-location"></i>
