@@ -6,7 +6,7 @@ import ComTransition from "../components/ComTransition/ComTransition.vue";
 import ComVModel from "../components/ComVModel/VModel.vue";
 import Form from "../components/Form/Form.vue";
 import ParentChild from "../components/ParentChild/Parent.vue";
-import ComRouterProps from "../components/Router/ComRouterProps/ComRouterProps.vue";
+
 import ComVuexBase from "../components/Vuex/Base/ComVuexBase.vue";
 import Signal from "../components/Signal/SignalBase.vue";
 import Sync from "../components/Sync/Sync.vue";
@@ -14,13 +14,16 @@ import ClassStyle from "../components/ClassStyle/ClassStyle.vue";
 import ElementPage from "../components/Element/ElementPage.vue";
 import ElementLayout from "../components/Element/ElementLayout.vue";
 
+const ComRouterProps = () =>
+	import("../components/Router/ComRouterProps/ComRouterProps.vue");
+
 const routers = [
 	{
 		title: "基本",
 		name: "com-base",
 		path: "/",
 		redirect: "/com-base",
-		childs: [
+		children: [
 			{
 				title: "基本",
 				name: "com-base",
@@ -93,13 +96,12 @@ const routers = [
 	{
 		title: "Router",
 		name: "RouterProps",
-		path: "/router-props/123",
-		redirect: "/router-props/123",
-		childs: [
+		children: [
 			{
 				title: "RouterProps",
 				name: "RouterProps",
-				path: "/router-props/123",
+				path: "/router-props/:id",
+				props: true,
 				component: ComRouterProps
 			}
 		]
@@ -110,7 +112,7 @@ const routers = [
 		name: "ComVuexBase",
 		path: "/vuex-base",
 		redirect: "/vuex-base",
-		childs: [
+		children: [
 			{
 				title: "ComVuexBase",
 				name: "ComVuexBase",
@@ -125,7 +127,7 @@ const routers = [
 		name: "Element",
 		path: "/element-page",
 		redirect: "/element-page",
-		childs: [
+		children: [
 			{
 				title: "ElementPage",
 				name: "ElementPage",

@@ -10,8 +10,9 @@
 							<span>{{route.title}}</span>
 						</template>
 						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in route.childs" :index="`${item.title}-${key}`" :key="key">
-								<router-link :to="item.path">{{item.name}}</router-link>
+							<el-menu-item v-for="(item, key) in route.children" :index="`${item.title}-${key}`" :key="key">
+								<router-link v-if="/^\/router-props\/:id$/.test(item.path)" to="/router-props/112121">{{item.name}}</router-link>
+                                <router-link v-else :to="item.path">{{item.name}}</router-link>
 							</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>

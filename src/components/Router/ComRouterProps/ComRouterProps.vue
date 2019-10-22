@@ -1,19 +1,21 @@
 <template>
-<div>
-	<p>routers params: <span>{{ params_id }}</span></p>
-	<p>routers query: <span>{{ query_id }}</span></p>
-</div>
+	<div>
+		<p>
+			routers params:
+			<span>{{ id }}</span>
+		</p>
+		<p>
+			routers query:
+			<span></span>
+		</p>
+	</div>
 </template>
 
 <script>
 export default {
+	props: ["id"],
 	data() {
 		return {};
-	},
-
-	props: ["params_id", "query_id"]
+	}
 };
 </script>
-
-<style>
-</style>

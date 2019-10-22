@@ -2,13 +2,13 @@ import VueRouter from "vue-router";
 
 import routes from "./routes";
 
-const getChilds = routers => {
+const getChildren = routers => {
 	return routers.reduce((prev, next) => {
-		return prev.concat(next.childs ? getChilds(next.childs) : next);
+		return prev.concat(next.children ? getChildren(next.children) : next);
 	}, []);
 };
 
-const r = getChilds(routes);
+const r = getChildren(routes);
 
 export { r };
 

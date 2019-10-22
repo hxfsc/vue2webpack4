@@ -1,12 +1,9 @@
-import "babel-polyfill";
 import Vue from "vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-
 import App from "./App.vue";
-
 import createRouter from "./router/router";
 import createStore from "./store/store";
 
