@@ -14,6 +14,7 @@ const ElementLayout = () => import("@components/Element/ElementLayout.vue");
 const ComRouterProps = () => import("@components/Router/ComRouterProps");
 const ComVuexBase = () => import("@components/Vuex/Base");
 const VuexInput = () => import("@components/Vuex/Input");
+const ElementDialig = () => import("@components/Element/Dialog");
 
 const routers = [
 	{
@@ -141,6 +142,12 @@ const routers = [
 				name: "ElementLayout",
 				path: "/element-layout",
 				component: ElementLayout
+			},
+			{
+				title: "Dialog",
+				name: "Dialog",
+				path: "/element-dialog",
+				component: ElementDialig
 			}
 		]
 	}
