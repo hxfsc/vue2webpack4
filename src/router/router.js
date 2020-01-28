@@ -15,7 +15,7 @@ export { r };
 export default () => {
 	return new VueRouter({
 		mode: "history",
-		routes: r,
+		routes: routes,
 		scrollBehavior(to, from, savedPosition) {
 			if (savedPosition) {
 				return savedPosition;
