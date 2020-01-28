@@ -1,6 +1,5 @@
 <template>
     <div class="container container-fluid class-style-wrap">
-
         <h3>Style inline</h3>
         <hr>
         <div class="alert alert-warning" :style="[styleObject]">改变 Style </div>
@@ -41,7 +40,6 @@ export default {
 	}
 };
 </script>
-
 <style scoped lang="scss">
 .class-style-wrap {
 	padding-top: 20px;
