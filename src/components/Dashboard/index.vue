@@ -1,91 +1,231 @@
 <template>
-  <el-container id="main">
-		<el-header></el-header>
-		<el-container>
-			<el-aside width="200px">
-				<el-menu :unique-opened="true">
-					<el-submenu v-for="(route, index) in routes" :index="`${route.title}-${index}`" :key="index">
-						<template slot="title">
-							<i class="el-icon-location"></i>
-							<span>{{route.title}}</span>
-						</template>
-						<el-menu-item-group>
-							<el-menu-item v-for="(item, key) in route.children" :index="`${item.title}-${key}`" :key="key">
-								<router-link v-if="/^\/router-props\/:id$/.test(item.path)" to="/router-props/112121">{{item.name}}</router-link>
-                                <router-link v-else :to="item.path">{{item.name}}</router-link>
-							</el-menu-item>
-						</el-menu-item-group>
-					</el-submenu>
-				</el-menu>
-			</el-aside>
+	<div>
+		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Logo</a>
+			<ul class="navbar-nav px-3">
+				<li class="nav-item text-nowrap">
+					<a class="nav-link" href="#">Sign out</a>
+				</li>
+			</ul>
+		</nav>
 
-			<el-container>
-				<el-main>
-					<el-breadcrumb separator="/">
-						<el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-						<el-breadcrumb-item v-for="(item, index) in breadcrumb" :key="index" :to="{ path: item.path}">{{item.title}}</el-breadcrumb-item>
-					</el-breadcrumb>
-					<hr />
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+					<div class="sidebar-sticky">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">
+									<span data-feather="home"></span>
+									面板
+									<span class="sr-only">(current)</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="file"></span>
+									订单
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="shopping-cart"></span>
+									产品
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="users"></span>
+									客户
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="bar-chart-2"></span>
+									导出
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="layers"></span>
+									机构
+								</a>
+							</li>
+						</ul>
 
-				</el-main>
-				<el-footer></el-footer>
-			</el-container>
-		</el-container>
-	</el-container>
+						<h6
+							class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
+						>
+							<span>Saved reports</span>
+							<a class="d-flex align-items-center text-muted" href="#">
+								<span data-feather="plus-circle"></span>
+							</a>
+						</h6>
+						<ul class="nav flex-column mb-2">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="file-text"></span>
+									本月
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="file-text"></span>
+									本季
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="file-text"></span>
+									半年
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="file-text"></span>
+									本年
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<h2>Section title</h2>
+					<div class="table-responsive">
+						<table class="table table-striped table-sm">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Header</th>
+									<th>Header</th>
+									<th>Header</th>
+									<th>Header</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1,001</td>
+									<td>Lorem</td>
+									<td>ipsum</td>
+									<td>dolor</td>
+									<td>sit</td>
+								</tr>
+								<tr>
+									<td>1,002</td>
+									<td>amet</td>
+									<td>consectetur</td>
+									<td>adipiscing</td>
+									<td>elit</td>
+								</tr>
+								<tr>
+									<td>1,003</td>
+									<td>Integer</td>
+									<td>nec</td>
+									<td>odio</td>
+									<td>Praesent</td>
+								</tr>
+								<tr>
+									<td>1,003</td>
+									<td>libero</td>
+									<td>Sed</td>
+									<td>cursus</td>
+									<td>ante</td>
+								</tr>
+								<tr>
+									<td>1,004</td>
+									<td>dapibus</td>
+									<td>diam</td>
+									<td>Sed</td>
+									<td>nisi</td>
+								</tr>
+								<tr>
+									<td>1,005</td>
+									<td>Nulla</td>
+									<td>quis</td>
+									<td>sem</td>
+									<td>at</td>
+								</tr>
+								<tr>
+									<td>1,006</td>
+									<td>nibh</td>
+									<td>elementum</td>
+									<td>imperdiet</td>
+									<td>Duis</td>
+								</tr>
+								<tr>
+									<td>1,007</td>
+									<td>sagittis</td>
+									<td>ipsum</td>
+									<td>Praesent</td>
+									<td>mauris</td>
+								</tr>
+								<tr>
+									<td>1,008</td>
+									<td>Fusce</td>
+									<td>nec</td>
+									<td>tellus</td>
+									<td>sed</td>
+								</tr>
+								<tr>
+									<td>1,009</td>
+									<td>augue</td>
+									<td>semper</td>
+									<td>porta</td>
+									<td>Mauris</td>
+								</tr>
+								<tr>
+									<td>1,010</td>
+									<td>massa</td>
+									<td>Vestibulum</td>
+									<td>lacinia</td>
+									<td>arcu</td>
+								</tr>
+								<tr>
+									<td>1,011</td>
+									<td>eget</td>
+									<td>nulla</td>
+									<td>Class</td>
+									<td>aptent</td>
+								</tr>
+								<tr>
+									<td>1,012</td>
+									<td>taciti</td>
+									<td>sociosqu</td>
+									<td>ad</td>
+									<td>litora</td>
+								</tr>
+								<tr>
+									<td>1,013</td>
+									<td>torquent</td>
+									<td>per</td>
+									<td>conubia</td>
+									<td>nostra</td>
+								</tr>
+								<tr>
+									<td>1,014</td>
+									<td>per</td>
+									<td>inceptos</td>
+									<td>himenaeos</td>
+									<td>Curabitur</td>
+								</tr>
+								<tr>
+									<td>1,015</td>
+									<td>sodales</td>
+									<td>ligula</td>
+									<td>in</td>
+									<td>libero</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</main>
+			</div>
+		</div>
+	</div>
 </template>
-
-<style lang="scss">
-@import "bootstrap/scss/bootstrap.scss";
-html,
-body {
-	height: 100%;
-	min-height: 100%;
-}
-</style>
-
-<style scoped lang="scss">
-#main {
-	height: 100%;
-	min-height: 100%;
-}
-aside {
-	border-right: solid 1px #e6e6e6;
-	min-height: 100%;
-	overflow: hidden;
-}
-header {
-	background-color: #545c64;
-}
-.el-menu {
-	margin-right: -1px;
-
-	a {
-		color: #303133;
-		display: inline-block;
-		height: 100%;
-		width: 100%;
-        text-decoration: none;
-	}
-}
-</style>
-
 <script>
-import routes from "./router/routes";
-export default {
-	data() {
-		return {
-			text: "",
-			routes
-		};
-	},
-
-	computed: {
-		breadcrumb() {
-			const { path } = this.$route;
-			const { routes:r } = this.$router.options;
-      const breadcrumb = r.filter(item => item.path == path);
-			return breadcrumb;
-		}
-	}
-};
+export default {}
 </script>
+<style src="./style.css" lang="css" scoped></style>
+

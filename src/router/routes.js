@@ -16,21 +16,20 @@ const ComVuexBase = () => import("@components/Vuex/Base");
 const VuexInput = () => import("@components/Vuex/Input");
 const ElementDialig = () => import("@components/Element/Dialog");
 
-
-const Login = ()=>import('@components/Login')
-
+const Dashboard = () => import("@components/Dashboard");
+const Login = () => import("@components/Login");
 
 const routers = [
-  {
-    path:'/login',
-    component: Login
-  },
 	{
-		title: "基本",
-		name: "com-base",
-		path: "/",
-		redirect: "/com-base",
+    path: "/login",
+    title: "login",
+		component: Login
+	},
+	{
+    path: "/",
+    title: "dashboard",
 		children: [
+      { path: '', component: Dashboard },
 			{
 				title: "基本",
 				name: "com-base",

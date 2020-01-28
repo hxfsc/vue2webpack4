@@ -38,4 +38,4 @@ export default {
 }
 </script>
 
-<style src='./login.css' type="css" scoped></style>
+<style src='./login.css' lang="css" scoped></style>
