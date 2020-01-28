@@ -97,8 +97,6 @@
 		</div>
 	</div>
 </template>
-<script>
-export default {}
-</script>
+<script>export default {}</script>
 <style src="./style.css" lang="css" scoped></style>
 
