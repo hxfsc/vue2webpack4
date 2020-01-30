@@ -5,8 +5,8 @@ module.exports = merge(common, {
 	mode: "development",
 	devtool: "source-map",
 	devServer: {
-        port: 8001,
-        hot: true,
+		port: 8001,
+		hot: true,
 		historyApiFallback: true,
 		overlay: {
 			warnings: true,

@@ -128,6 +128,21 @@
 				</tbody>
 			</table>
 		</div>
+    <hr>
+    <div class="pagination">
+      <Pagination/>
+    </div>
 	</div>
 </template>
+
+<script>
+import Pagination from "@components/Pagination"
+export default {
+  components: {
+    Pagination
+  }
+
+}
+</script>
+<style src="./style.scss" lang="scss" scoped></style>
 

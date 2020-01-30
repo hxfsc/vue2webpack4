@@ -13,7 +13,8 @@ module.exports = {
 	resolve: {
 		extensions: ["*", ".js", ".vue"],
 		alias: {
-			"@components": path.resolve(__dirname, "src/components")
+			"@components": path.resolve(__dirname, "src/components"),
+			"@pages": path.resolve(__dirname, "src/pages")
 		}
 	},
 	module: {
@@ -39,17 +40,17 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: ["vue-style-loader", "css-loader", "sass-loader"]
-      },
+			},
 
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {},
-          },
-        ],
-      },
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {}
+					}
+				]
+			}
 		]
 	},
 

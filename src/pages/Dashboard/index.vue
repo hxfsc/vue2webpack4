@@ -22,34 +22,34 @@
 								</router-link>
 							</li>
 							<li class="nav-item">
-								<router-link  class="nav-link" to="/order">
+								<router-link class="nav-link" to="/order">
 									<span data-feather="file"></span>
 									订单
 								</router-link>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<router-link class="nav-link" to="/products">
 									<span data-feather="shopping-cart"></span>
 									产品
-								</a>
+								</router-link>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<router-link class="nav-link" to="/customer">
 									<span data-feather="users"></span>
 									客户
-								</a>
+								</router-link>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<router-link class="nav-link" to="/derive">
 									<span data-feather="bar-chart-2"></span>
 									导出
-								</a>
+								</router-link>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<router-link class="nav-link" to="/institution">
 									<span data-feather="layers"></span>
 									机构
-								</a>
+								</router-link>
 							</li>
 						</ul>
 
@@ -97,6 +97,8 @@
 		</div>
 	</div>
 </template>
-<script>export default {}</script>
+<script>
+export default {};
+</script>
 <style src="./style.css" lang="css" scoped></style>
 
