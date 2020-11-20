@@ -6,21 +6,13 @@
         <p>使用Chrome、Firefox浏览器登入</p>
       </div>
 
-      <div class="form-label-group">
-        <input type="text" id="inputEmail" class="form-control" placeholder="用户">
-      </div>
+      <div class="form-label-group"><input type="text" id="inputEmail" class="form-control" placeholder="用户"/></div>
 
-      <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="密码">
-      </div>
+      <div class="form-label-group"><input type="password" id="inputPassword" class="form-control" placeholder="密码"/></div>
 
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> 记住我
-        </label>
-      </div>
+      <div class="checkbox mb-3"><label><input type="checkbox" value="remember-me" /> 记住我</label></div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted text-center">{{datetime}}</p>
+      <p class="mt-5 mb-3 text-center copytright">{{datetime}}</p>
     </div>
   </div>
 </template>

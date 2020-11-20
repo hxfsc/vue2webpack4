@@ -13,12 +13,16 @@
   max-width: 420px;
   padding: 25px;
   margin: 0 auto;
-  background: #ffffff90;
-  color: #333;
+  background: #00000060;
+  color: #fff;
   border-radius: 10px;
 }
 
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
+}
+
+.copytright{
+  color: #fff
 }

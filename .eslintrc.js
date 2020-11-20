@@ -10,16 +10,16 @@ module.exports = {
 		ecmaFeatures: {
 			experimentalObjectRestSpread: true,
 			jsx: true
-    },
-    parser: "babel-eslint",
+		},
+		parser: "babel-eslint",
 		sourceType: "module"
 	},
-  plugins: ["vue", "prettier"],
+	plugins: ["vue", "prettier"],
 	rules: {
 		"prettier/prettier": "error",
 		"no-console": 0,
-    "no-tabs": "off",
-    indent: ["error", "tab"],
+		"no-tabs": "off",
+		indent: ["error", "tab"],
 		"linebreak-style": ["error", "unix"],
 		quotes: ["error", "double"],
 		semi: ["off", "always"],
