@@ -3,7 +3,7 @@ const Statistics = () => import("@pages/Statistics");
 const Dashboard = () => import("@pages/Dashboard");
 const Order = () => import("@pages/Order");
 const Login = () => import("@pages/Login");
-
+const BaseTpl = () => import("@pages/BaseDemo/TplDemo");
 const routers = [
 	{
 		path: "/",
@@ -11,6 +11,7 @@ const routers = [
 		component: Dashboard,
 		children: [
 			{ path: "", component: Statistics },
+			{ path: "basedemo", component: BaseTpl },
 			{ path: "order", component: Order },
 			{ path: "statistics", component: Statistics },
 			{ path: "products", component: Products },

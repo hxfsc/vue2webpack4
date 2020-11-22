@@ -21,6 +21,13 @@
 									<span class="sr-only">(current)</span>
 								</router-link>
 							</li>
+
+							<li class="nav-item">
+								<router-link class="nav-link" to="/basedemo">
+									<span data-feather="file"></span>
+									基础
+								</router-link>
+							</li>
 							<li class="nav-item">
 								<router-link class="nav-link" to="/order">
 									<span data-feather="file"></span>
@@ -101,4 +108,3 @@
 export default {};
 </script>
 <style src="./style.css" lang="css" scoped></style>
-
