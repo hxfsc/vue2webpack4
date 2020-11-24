@@ -24,14 +24,11 @@ export default {
   mounted(){
     this.$parent.parentTest()
     event.$on("eventEmitInputChange", ($event)=>{
-      console.log($event)
+      console.log($event.target.value)
     })
   },
 
   methods:{
-    eventEmitInputChange($event){
-      console.log($event)
-    },
     childrenTest(){
       console.log("childen-test")
     }

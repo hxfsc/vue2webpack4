@@ -5,6 +5,7 @@ const Order = () => import("@pages/Order")
 const Login = () => import("@pages/Login")
 const BaseTpl = () => import("@pages/BaseDemo/TplDemo")
 const ComponentsDemo = () => import("@pages/ComponentsDemo")
+const VuexDemo = () => import("@pages/VuexDemo")
 
 const routers = [
   {
@@ -15,6 +16,7 @@ const routers = [
       { path: "", component: Statistics },
       { path: "basedemo", component: BaseTpl },
       { path: "componentsdemo", component: ComponentsDemo },
+      { path: "vuexdemo", component: VuexDemo },
       { path: "order", component: Order },
       { path: "statistics", component: Statistics },
       { path: "products", component: Products },

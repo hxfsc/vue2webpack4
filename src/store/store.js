@@ -1,14 +1,17 @@
-import Vuex from "vuex";
-import defaultState from "./state/state";
-import mutations from "./mutations/mutations";
-import getters from "./getters/getters";
-import actions from "./actions/actions";
+import Vuex from "vuex"
+import defaultState from "./state/state"
+import mutations from "./mutations/mutations"
+import getters from "./getters/getters"
+import actions from "./actions/actions"
+
+import moudleVuex from "./module/vuexdemo"
 
 export default () => {
-	return new Vuex.Store({
-		state: defaultState,
-		mutations,
-		getters,
-		actions
-	});
-};
+  return new Vuex.Store({
+    state: defaultState,
+    mutations,
+    getters,
+    actions,
+    modules: { moudleVuex }
+  })
+}

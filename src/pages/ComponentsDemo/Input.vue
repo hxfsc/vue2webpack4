@@ -12,7 +12,6 @@ import event from './event'
 export default {
   methods:{
     changeInput($event){
-      console.log($event)
       event.$emit("eventEmitInputChange", $event)
     }
   }
