@@ -11,6 +11,11 @@ Vue.use(ElementUI)
 Vue.use(Vuex)
 Vue.use(VueRouter)
 
+//开启performance性能追踪
+if (process.env.NODE_ENV !== "production") {
+  Vue.config.performance = true
+}
+
 const store = createStore()
 const router = createRouter()
 

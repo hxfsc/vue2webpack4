@@ -2,7 +2,7 @@
   <div>
     <p>{{num}}</p>
 
-    <button class="btn btn-permiary" @click="add(3)">add</button>
+    <button class="btn btn-primary" @click="add(3)">add</button>
   </div>
 </template>
 <script>

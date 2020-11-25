@@ -43,6 +43,25 @@
               <li class="nav-item">
                 <router-link
                   class="nav-link"
+                  to="/watchdemo"
+                >
+                  <span data-feather="file"></span>
+                  Watch
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link
+                  class="nav-link"
+                  to="/nexttickdemo"
+                >
+                  <span data-feather="file"></span>
+                  NextTick
+                </router-link>
+              </li>
+
+              <li class="nav-item">
+                <router-link
+                  class="nav-link"
                   to="/componentsdemo"
                 >
                   <span data-feather="file"></span>
