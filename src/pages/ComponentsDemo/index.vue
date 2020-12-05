@@ -1,11 +1,7 @@
 <template>
   <div>
     <Input />
-    <List
-      :list="list"
-      @emit-del="del"
-      ref="refList"
-    />
+    <List :list="list" @emit-del="del" ref="refList" />
   </div>
 </template>
 
@@ -33,12 +29,12 @@ export default {
     del(item) {
       console.log(item.id)
     },
-    parentTest(){
+    parentTest() {
       console.log("parent-test")
     }
   },
 
-  mounted(){
+  mounted() {
     this.$refs.refList.childrenTest()
   }
 }

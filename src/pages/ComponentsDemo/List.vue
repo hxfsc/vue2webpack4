@@ -1,17 +1,13 @@
 <template>
   <div>
     <ul>
-      <li
-        v-for="item in list"
-        :key="item.id"
-        @click="$emit('emit-del', item)"
-      >{{ item.title }}</li>
+      <li v-for="item in list" :key="item.id" @click="$emit('emit-del', item)">{{ item.title }}</li>
     </ul>
   </div>
 </template>
 
 <script>
-import event from './event'
+import event from "./event"
 export default {
   props: {
     list: {
@@ -21,15 +17,15 @@ export default {
     }
   },
 
-  mounted(){
+  mounted() {
     this.$parent.parentTest()
-    event.$on("eventEmitInputChange", ($event)=>{
+    event.$on("eventEmitInputChange", $event => {
       console.log($event.target.value)
     })
   },
 
-  methods:{
-    childrenTest(){
+  methods: {
+    childrenTest() {
       console.log("childen-test")
     }
   }
