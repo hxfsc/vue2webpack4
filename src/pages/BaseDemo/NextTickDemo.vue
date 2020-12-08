@@ -20,9 +20,9 @@ export default {
 
   methods: {
     getData() {
-      this.list = [1, 2, 3, 4]
+      this.list = [1, 2, 3, 4, 5, 6]
       this.$nextTick(() => {
-        this.$refs.box.getElementsByTagName("li")[0].innerHTML = "hello word"
+        this.$refs.box.getElementsByTagName("li")[0].innerHTML = "hello word1"
       })
     }
   }
